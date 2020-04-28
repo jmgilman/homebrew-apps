@@ -7,11 +7,11 @@ class Vssh < Formula
 
   if OS.mac?
     url "https://github.com/jmgilman/vssh/releases/download/v0.1.2/vssh_0.1.2_Darwin_x86_64.tar.gz"
-    sha256 "6f9df58479482990d38c4d1c7f801dc6e8af97d93a2678b3f1a76b5f575cc9f4"
+    sha256 "07de706b33a2b9fc776bcf4c549e4a7e61acc493202125aa2141808f17ad915a"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/jmgilman/vssh/releases/download/v0.1.2/vssh_0.1.2_Linux_x86_64.tar.gz"
-      sha256 "7ad7265438a536d28ef490cef9d816de9bec719908752d1e2f1a2a4e8531d016"
+      sha256 "e6e77895da5b87debef8231463f65b490127ea815f9b6fc67d2ff155830d8197"
     end
   end
 
