@@ -6,12 +6,12 @@ class Vssh < Formula
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/jmgilman/vssh/releases/v0.1.2/vssh_0.1.2_Darwin_x86_64.tar.gz"
-    sha256 "3191cdbe340267ae62b6e772766ca07548eb49ddc2a9c379a7939d33f5883b51"
+    url "https://github.com/jmgilman/vssh/releases/download/v0.1.2/vssh_0.1.2_Darwin_x86_64.tar.gz"
+    sha256 "6f9df58479482990d38c4d1c7f801dc6e8af97d93a2678b3f1a76b5f575cc9f4"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/jmgilman/vssh/releases/v0.1.2/vssh_0.1.2_Linux_x86_64.tar.gz"
-      sha256 "794ad6155b7333300430b73c99f075ae81913519a99813336e0958b10dc91f53"
+      url "https://github.com/jmgilman/vssh/releases/download/v0.1.2/vssh_0.1.2_Linux_x86_64.tar.gz"
+      sha256 "7ad7265438a536d28ef490cef9d816de9bec719908752d1e2f1a2a4e8531d016"
     end
   end
 
