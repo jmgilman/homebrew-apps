@@ -10,11 +10,9 @@ jobs:
     steps:
       - name: Checkout sources
         uses: actions/checkout@v2
-      - uses: DamianReeves/write-file-action
-        with:
-          path: Formula/${{github.event.client_payload.name }}.rb
-          contents: ${{ github.event.client_payload.content }}
-          write-mode: overwrite
+      - name: Update formula
+        run: |
+          echo "${{ github.event.client_payload.content }}" | base64 -d > Formula/${{github.event.client_payload.name }}.rb
       - name: Create PR with update
         uses: repo-sync/pull-request@v2
         with:
