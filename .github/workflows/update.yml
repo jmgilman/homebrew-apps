@@ -1,0 +1,24 @@
+on:
+  repository_dispatch:
+    types: [update]
+
+name: Update Homebrew formula
+
+jobs:
+  pull-request:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout sources
+        uses: actions/checkout@v2
+      - uses: DamianReeves/write-file-action
+        with:
+          path: Formula/${{github.event.client_payload.name }}.rb
+          contents: ${{ github.event.client_payload.content }}
+          write-mode: overwrite
+      - name: Create PR with update
+        uses: repo-sync/pull-request@v2
+        with:
+          destination_branch: master
+          pr_title: "Updates ${{github.event.client_payload.name }} to ${{ github.event.client_payload.version }}"
+          pr_reviewer: jmgilman
+          pr_assignee: jmgilman
