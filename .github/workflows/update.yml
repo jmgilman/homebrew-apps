@@ -10,12 +10,19 @@ jobs:
     steps:
       - name: Checkout sources
         uses: actions/checkout@v2
+      - name: Create branch
+        uses: peterjgrainger/action-create-branch@v2.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          branch: "${{github.event.client_payload.name }}-${{ github.event.client_payload.version }}"
       - name: Update formula
         run: |
           echo "${{ github.event.client_payload.content }}" | base64 -d > Formula/${{github.event.client_payload.name }}.rb
       - name: Create PR with update
         uses: repo-sync/pull-request@v2
         with:
+          source_branch: "${{github.event.client_payload.name }}-${{ github.event.client_payload.version }}"
           destination_branch: master
           pr_title: "Updates ${{github.event.client_payload.name }} to ${{ github.event.client_payload.version }}"
           pr_reviewer: jmgilman
