@@ -20,3 +20,4 @@ jobs:
           pr_title: "Updates ${{github.event.client_payload.name }} to ${{ github.event.client_payload.version }}"
           pr_reviewer: jmgilman
           pr_assignee: jmgilman
+          github_token: ${{ secrets.GITHUB_TOKEN }}
