@@ -5,21 +5,21 @@
 class Sow < Formula
   desc "AI-powered system of work - Structured software development with AI agents"
   homepage "https://github.com/jmgilman/sow"
-  version "0.0.1-test"
+  version "0.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jmgilman/sow/releases/download/v0.0.1-test/sow_0.0.1-test_Darwin_x86_64.tar.gz"
-      sha256 "e52f18cfc89eb9791c184dfdbc26625ab91335516232eaab187eea885a0da556"
+      url "https://github.com/jmgilman/sow/releases/download/v0.1.0/sow_0.1.0_Darwin_x86_64.tar.gz"
+      sha256 "3f552d8409965b6653156b48eec17b1014c3b6ddf2180f1d2b279be8eea26ec9"
 
       def install
         bin.install "sow"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jmgilman/sow/releases/download/v0.0.1-test/sow_0.0.1-test_Darwin_arm64.tar.gz"
-      sha256 "4493edf3f7803ba6f8bbb28b2f496067b99f764da6bfc39059668c3e166c1c96"
+      url "https://github.com/jmgilman/sow/releases/download/v0.1.0/sow_0.1.0_Darwin_arm64.tar.gz"
+      sha256 "a60cf5a460ac069121deb2867773dccc36a15ba80db4cbfde70fe8c6378c5eda"
 
       def install
         bin.install "sow"
@@ -29,15 +29,15 @@ class Sow < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jmgilman/sow/releases/download/v0.0.1-test/sow_0.0.1-test_Linux_x86_64.tar.gz"
-      sha256 "a70c76d1570563f55c0e093202e18630410d81529b6df50c9bda200e6049a7f2"
+      url "https://github.com/jmgilman/sow/releases/download/v0.1.0/sow_0.1.0_Linux_x86_64.tar.gz"
+      sha256 "45843eef40492ef1e068053bed0f104c50129368b31e4cf4d4a9828e86fd3858"
       def install
         bin.install "sow"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jmgilman/sow/releases/download/v0.0.1-test/sow_0.0.1-test_Linux_arm64.tar.gz"
-      sha256 "659561505c67eefd96e1a52416206f2ae333a3e1c53f849a0209ea4ca51cc625"
+      url "https://github.com/jmgilman/sow/releases/download/v0.1.0/sow_0.1.0_Linux_arm64.tar.gz"
+      sha256 "df20809e4c25004282be126af4610dc7179ee1bc286bd784df4955ab77f9c87a"
       def install
         bin.install "sow"
       end
