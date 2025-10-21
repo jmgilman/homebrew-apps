@@ -5,21 +5,21 @@
 class Sow < Formula
   desc "AI-powered system of work - Structured software development with AI agents"
   homepage "https://github.com/jmgilman/sow"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jmgilman/sow/releases/download/v0.1.0/sow_0.1.0_Darwin_x86_64.tar.gz"
-      sha256 "3f552d8409965b6653156b48eec17b1014c3b6ddf2180f1d2b279be8eea26ec9"
+      url "https://github.com/jmgilman/sow/releases/download/v0.1.1/sow_0.1.1_Darwin_x86_64.tar.gz"
+      sha256 "53eac7f9d529e9caae9d7a0e407ab69adea833fd4a28630412b369c9e77c1857"
 
       def install
         bin.install "sow"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jmgilman/sow/releases/download/v0.1.0/sow_0.1.0_Darwin_arm64.tar.gz"
-      sha256 "a60cf5a460ac069121deb2867773dccc36a15ba80db4cbfde70fe8c6378c5eda"
+      url "https://github.com/jmgilman/sow/releases/download/v0.1.1/sow_0.1.1_Darwin_arm64.tar.gz"
+      sha256 "a674277534db0609cc8cda06d33a12c2d488c1098b78aee341a58d39ff7bf781"
 
       def install
         bin.install "sow"
@@ -29,15 +29,15 @@ class Sow < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jmgilman/sow/releases/download/v0.1.0/sow_0.1.0_Linux_x86_64.tar.gz"
-      sha256 "45843eef40492ef1e068053bed0f104c50129368b31e4cf4d4a9828e86fd3858"
+      url "https://github.com/jmgilman/sow/releases/download/v0.1.1/sow_0.1.1_Linux_x86_64.tar.gz"
+      sha256 "112dbb7f4a8269d8a7f75840da9d5c1e2aa8a609f422a4b5d590cda02d336860"
       def install
         bin.install "sow"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jmgilman/sow/releases/download/v0.1.0/sow_0.1.0_Linux_arm64.tar.gz"
-      sha256 "df20809e4c25004282be126af4610dc7179ee1bc286bd784df4955ab77f9c87a"
+      url "https://github.com/jmgilman/sow/releases/download/v0.1.1/sow_0.1.1_Linux_arm64.tar.gz"
+      sha256 "9ecab2e274325c2f6ca3d7ca96ba4cd911706c4649fc6b20096f13f2038e8d1e"
       def install
         bin.install "sow"
       end
